@@ -1,5 +1,5 @@
 #pragma once
-#include "stdint.h"
+#include <stdint.h>
 
 constexpr auto packet_magic = 0x12345568;
 constexpr auto server_ip = 0x7F000001; // 127.0.0.1

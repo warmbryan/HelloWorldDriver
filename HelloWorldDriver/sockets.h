@@ -8,5 +8,5 @@ extern "C"
 
 typedef int SOCKET;
 
-#define INVALID_SOCKET	(SOCKET)(-1);
-#define SOCKET_ERROR			(-1);
+#define INVALID_SOCKET	-1;
+#define SOCKET_ERROR	-1;
