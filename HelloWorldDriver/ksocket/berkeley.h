@@ -1,7 +1,7 @@
 #pragma once
 #include <ntddk.h>
 #include <wsk.h>
-#include "../stdint.h"
+#include <stdint.h>
 
 typedef int       socklen_t;
 typedef intptr_t  ssize_t;
