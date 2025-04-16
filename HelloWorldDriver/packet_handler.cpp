@@ -1,9 +1,12 @@
 #include "shared.h"
 #include "sockets.h"
+#include "logging.h"
 #include "imports.h"
 
 static uint64_t handle_copy_memory(const PacketCopyMemory& packet)
 {
+	log("Received request to copy memory of PID: %d for %d bytes @ %X", packet.);
+
 	PEPROCESS dest_process = nullptr;
 	PEPROCESS src_process = nullptr;
 
@@ -37,6 +40,8 @@ static uint64_t handle_copy_memory(const PacketCopyMemory& packet)
 
 static uint64_t handle_get_base_address(const PacketGetBaseAddress& packet)
 {
+	log("Received request to get base address of PID: %d", packet.process_id);
+
 	PEPROCESS process = nullptr;
 	NTSTATUS  status = PsLookupProcessByProcessId(HANDLE(packet.process_id), &process);
 
